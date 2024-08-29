@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_matrix_settings" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.matrix.settings</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="90"/>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+          <xpath expr="//div[hasclass('settings')]" position="inside">
+            <div name="l10n_xma_mtx_timbr_settings" class="app_settings_block" data-string="Matrix Settings" string="xMarts" data-key="matrix_settings_key">
+              <h2 id="l10n_xma_test_fields">Configuracion de Timbrado</h2>
+              <div class="row mt16 o_settings_container" id="type_invoice_pac">
+                <div class="col-12 col-lg-6 o_setting_box">
+                  <div class="o_setting_left_pane"/>
+                  <div class="o_setting_right_pane">
+                      <span class="o_form_label">Pac de Facturacion</span>
+                      <div class="text-muted">
+                          Selecione pac de facturacion
+                      </div>
+                      <div class="text-muted">
+                          <field name="l10n_xma_type_pac"/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+                <div class="row mt16 o_settings_container" id="timbr_settings" name="config_test">
+                  <div class="col-12 col-lg-6 o_setting_box">
+                    <div class="o_setting_left_pane"/>
+                    <div class="o_setting_right_pane">
+                        <span class="o_form_label">Entorno de Pruebas</span>
+                        <div class="text-muted">
+                            Active la casilla si usted desea que los documentos electrónicos sean de prueba.
+                        </div>
+                        <div class="text-muted">
+                            <field name="l10n_xma_test"/>
+                        </div>
+                    </div>
+                  </div> 
+                </div>
+                <div class="row mt16 o_settings_container" id="timbr_enterprise_settings" name="config_test_e">
+                  <div class="col-12 col-lg-6 o_setting_box">
+                    <div class="o_setting_left_pane"/>
+                    <div class="o_setting_right_pane">
+                      <span class="o_form_label">Entorno de Enterprise</span>
+                      <div class="text-muted">
+                          Active la casilla si el entorno utilizado es Enterprise
+                      </div>
+                      <div class="text-muted">
+                          <field name="l10n_xma_odoo_sh_environment"/>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+                <h2 id="matrix">Server Settings</h2>
+                  <div class="row mt16 o_settings_container" id="matrix_url_settings">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                      <div class="o_setting_left_pane"/>
+                      <div class="o_setting_right_pane">
+                          <span class="o_form_label">Servidor</span>
+                          <div class="text-muted">
+                              Coloque url del servidor a establecer conexion
+                          </div>
+                          <div class="text-muted">
+                              <field name="matrix_server"/>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt16 o_settings_container" id="matrix_user_settings">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                      <div class="o_setting_left_pane"/>
+                      <div class="o_setting_right_pane">
+                          <span class="o_form_label">Usuario</span>
+                          <div class="text-muted">
+                              Usuario para loggin
+                          </div>
+                          <div class="text-muted">
+                              <field name="matrix_user"/>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt16 o_settings_container" id="matrix_pass_settings">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                      <div class="o_setting_left_pane"/>
+                      <div class="o_setting_right_pane">
+                          <span class="o_form_label">Password</span>
+                          <div class="text-muted">
+                              Password para loggin
+                          </div>
+                          <div class="text-muted">
+                            <field name="matrix_password" password="True"/>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt16 o_settings_container" id="matrix_id_sala_settings">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                      <div class="o_setting_left_pane"/>
+                      <div class="o_setting_right_pane">
+                          <span class="o_form_label">ID de la Sala</span>
+                          <div class="text-muted">
+                              Coloce el ID de la sala
+                          </div>
+                          <div class="text-muted">
+                            <field name="matrix_room"/>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt16 o_settings_container" id="matrix_id_token_settings">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                      <div class="o_setting_left_pane"/>
+                      <div class="o_setting_right_pane">
+                          <span class="o_form_label">Access Token</span>
+                          <div class="text-muted">
+                            Access Token
+                          </div>
+                          <div class="text-muted">
+                            <field name="access_token" password="True"/>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt16 o_settings_container" id="matrix_id_uuide_client_settings">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                      <div class="o_setting_left_pane"/>
+                      <div class="o_setting_right_pane">
+                          <span class="o_form_label">UUID cliente</span>
+                          <div class="text-muted">
+                           UUID de cliente
+                          </div>
+                          <div class="text-muted">
+                            <field name="uuid_client"/>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="l10n_xma_settings_admin" model="res.groups">
+        <field name="name">Admin Settings</field>
+    </record>
+
+</odoo>

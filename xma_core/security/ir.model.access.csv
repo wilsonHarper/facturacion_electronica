@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_xma_core_xma_core,xma_core.xma_core,model_xma_core_xma_core,base.group_user,1,1,1,1
